@@ -1,0 +1,20 @@
+﻿@model WebUI.Models.FeaturedProjectsViewModel
+
+@{
+    ViewBag.Title = "Featured Projects";
+}
+
+<h2>Projects</h2>
+<div>
+	@{
+		foreach (var houseModule in Model.Projects)
+		{
+			<div>
+				houseModule.Title;
+			</div>
+			
+			<img src= "@Url.Content(houseModule.Picture)"/>
+		}
+		
+	}
+</div>
